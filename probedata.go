@@ -107,7 +107,7 @@ type StreamDisposition struct {
 
 // Chapters is a json data structure to represent chapters.
 type Chapter struct {
-	ID               int     `json:"id"`
+	ID               int64   `json:"id"`
 	TimeBase         string  `json:"time_base"`
 	StartTimeSeconds float64 `json:"start_time,string"`
 	EndTimeSeconds   float64 `json:"end_time,string"`
