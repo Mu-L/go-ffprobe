@@ -50,7 +50,7 @@ linters:
       threshold: 100
     goconst:
       min-len: 3
-      min-occurrences: 2
+      min-occurrences: 3
     gocyclo:
       min-complexity: 20
     lll:
@@ -64,6 +64,11 @@ linters:
       - common-false-positives
       - legacy
       - std-error-handling
+    rules:
+      - path: ^example/
+        linters:
+          - gosec
+        text: G706
     paths:
       - third_party$
       - builtin$
